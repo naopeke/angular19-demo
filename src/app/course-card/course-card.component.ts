@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Course } from '../model/course';
 
 @Component({
@@ -11,8 +11,12 @@ export class CourseCardComponent {
 
     @Input()
     course: Course | undefined = undefined;
+
+    @Output('courseSelected')
+    courseEmitter = new EventEmitter<Course>();
     
     onCourseViewed(){
-      console.log("card component - button clicked ...")
+      console.log("card component - button clicked ...", this.course);
+      this.courseEmitter.emit(this.course);
     }
 }
