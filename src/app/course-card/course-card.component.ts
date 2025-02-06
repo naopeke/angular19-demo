@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Course } from '../model/course';
 
 @Component({
   selector: 'app-course-card',
@@ -9,6 +10,5 @@ import { Component, Input } from '@angular/core';
 export class CourseCardComponent {
 
     @Input()
-    title:string ='';
-    
+    course: Course | undefined = undefined;    
 }
