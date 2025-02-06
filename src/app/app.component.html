@@ -5,10 +5,13 @@
 
 </div>
 
+<h1>{{ coreCourse.description}}</h1>
 
 <div class="courses">
 
-  <app-course-card></app-course-card>
+  <app-course-card [title]="coreCourse.description"></app-course-card>
+  <app-course-card [title]="rxjsCourse.description"></app-course-card>
+  <app-course-card [title]="ngrxCourse.description"></app-course-card>
 
 </div>
 

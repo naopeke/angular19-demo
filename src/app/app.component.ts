@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CourseCardComponent } from './course-card/course-card.component';
+import { COURSES } from '../db-data';
 
 @Component({
   selector: 'app-root',
@@ -10,15 +11,7 @@ import { CourseCardComponent } from './course-card/course-card.component';
 })
 export class AppComponent {
 
-  data = {
-    title:'angular19-demo'
-  };
-
-  onLogoClicked(){
-    alert('Hello World');
-  }
-
-  onKeyUp(newTitle: string){
-    this.data.title = newTitle
-  }
+  coreCourse = COURSES[0];
+  rxjsCourse = COURSES[1];
+  ngrxCourse = COURSES[2];
 }
