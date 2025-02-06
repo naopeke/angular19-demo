@@ -8,5 +8,16 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular19-demo';
+
+  data = {
+    title:'angular19-demo'
+  };
+
+  onLogoClicked(){
+    alert('Hello World');
+  }
+
+  onKeyUp(newTitle: string){
+    this.data.title = newTitle
+  }
 }
