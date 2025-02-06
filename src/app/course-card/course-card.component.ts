@@ -10,5 +10,9 @@ import { Course } from '../model/course';
 export class CourseCardComponent {
 
     @Input()
-    course: Course | undefined = undefined;    
+    course: Course | undefined = undefined;
+    
+    onCourseViewed(){
+      console.log("card component - button clicked ...")
+    }
 }
