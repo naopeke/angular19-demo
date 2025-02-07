@@ -40,4 +40,15 @@ export class CourseCardComponent {
     //     'course-card': true}
     // }
     
+
+    // cardStyles(){
+    //   return {'text-decoration': 'underline'}
+    // }
+
+    cardStyles(){
+      return {
+        'background-image': 'url(' + this.course?.iconUrl + ')'
+      }
+    }
+    
 }
