@@ -5,13 +5,18 @@
 
 </div>
 
-<h1>{{ coreCourse.description}}</h1>
+<!-- <h1>{{ coreCourse.description}}</h1> -->
 
 <div class="courses">
 
-  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="coreCourse"></app-course-card>
+  @for (course of courses; track course.id){
+    <app-course-card 
+      (courseSelected)="onCourseSelected($event)" 
+      [course]="course" />
+  }
+  <!-- <app-course-card (courseSelected)="onCourseSelected($event)" [course]="coreCourse"></app-course-card>
   <app-course-card (courseSelected)="onCourseSelected($event)" [course]="rxjsCourse"></app-course-card>
-  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="ngrxCourse"></app-course-card>
+  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="ngrxCourse"></app-course-card> -->
 
 </div>
 
