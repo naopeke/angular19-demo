@@ -1,4 +1,12 @@
-<div class="course-card">
+<div class=""
+    [class]="cardClasses()"
+>
+
+<!-- [class]="'beginner'" -->
+<!-- [class]="['beginner', 'course-card']" -->
+<!-- [class]="{'beginner': true, 'course-card': true}" -->
+
+
 
     <div class="course-title">
         {{ index }} {{ course?.description }}

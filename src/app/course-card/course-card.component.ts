@@ -22,4 +22,22 @@ export class CourseCardComponent {
       console.log("card component - button clicked ...", this.course);
       this.courseEmitter.emit(this.course);
     }
+
+    cardClasses(){
+      if (this.course?.category === 'BEGINNER'){
+        return ['beginner'];
+      }
+      return [];
+    }
+    //三項演算子
+    // cardClasses() {
+    //   return this.course?.category === 'BEGINNER' ? ['beginner'] : [];
+    // }
+
+    // cardClasses(){
+    //   return {
+    //     'beginner': this.course?.category === 'BEGINNER', 
+    //     'course-card': true}
+    // }
+    
 }
