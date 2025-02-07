@@ -9,16 +9,16 @@
 
 <div class="courses">
 
-  @for (course of courses; track course.id; let index = $index; let count = $count; let first = $first; let last = $last; let even = $even; let odd = $odd){
+  @for (course of courses; track course.id; let count = $count;){
     <h1>Count: {{ count }}</h1>
     <app-course-card 
       (courseSelected)="onCourseSelected($event)" 
       [course]="course" 
-      [index]="index"
-      [class.is-first]="first"
-      [class.is-last]="last"
-      [class.is-even]="even"
-      [class.is-odd]="odd"
+      [index]="$index"
+      [class.is-first]="$first"
+      [class.is-last]="$last"
+      [class.is-even]="$even"
+      [class.is-odd]="$odd"
     />
   }
   <!-- <app-course-card (courseSelected)="onCourseSelected($event)" [course]="coreCourse"></app-course-card>
