@@ -13,7 +13,7 @@ export class CourseCardComponent {
     course: Course | undefined = undefined;
 
     @Input({required: true})
-    index!: number; // ! をつけることで、「このプロパティは Angular によって確実にセットされる」と TypeScript に伝えることができます。index: number = 0;にしても可
+    index!: number;
 
     @Output('courseSelected')
     courseEmitter = new EventEmitter<Course>();
