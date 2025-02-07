@@ -9,14 +9,26 @@
 
 <div class="courses">
 
-  @for (course of courses; track course.id){
+  @for (course of courses; track course.id; let index = $index; let count = $count; let first = $first; let last = $last; let even = $even; let odd = $odd){
+    <h1>Count: {{ count }}</h1>
     <app-course-card 
       (courseSelected)="onCourseSelected($event)" 
-      [course]="course" />
+      [course]="course" 
+      [index]="index"
+      [class.is-first]="first"
+      [class.is-last]="last"
+      [class.is-even]="even"
+      [class.is-odd]="odd"
+    />
   }
   <!-- <app-course-card (courseSelected)="onCourseSelected($event)" [course]="coreCourse"></app-course-card>
   <app-course-card (courseSelected)="onCourseSelected($event)" [course]="rxjsCourse"></app-course-card>
   <app-course-card (courseSelected)="onCourseSelected($event)" [course]="ngrxCourse"></app-course-card> -->
+
+  @empty {
+    <h1>No courses found!</h1>
+  }
+
 
 </div>
 
