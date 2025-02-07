@@ -5,6 +5,17 @@
 
 </div>
 
+{{ courses | json }}
+
+<div *ngFor="let pair of course | keyvalue">
+  {{pair.key + ': ' + pair.value}}
+</div>
+
+<div class="demo">
+  <div> Start Date : {{startDate | date: 'MM/dd/yy' }}</div>
+  <div> {{ title | titlecase }}</div>
+</div>
+
 <div class="courses">
 
   @for (course of courses; track course.id; let count = $count;){
